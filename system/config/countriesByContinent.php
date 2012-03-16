@@ -21,21 +21,21 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    GeoProtection
+ * @copyright  MEN AT WORK 2012
+ * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
  
 $countriesByContinent = array
 (
-	'antarctica' 		=> array(
+	'antarctica' => array(
 		'aq' => 'Antarctica',
 		'bv' => 'Bouvet Island',
 		'tf' => 'French Southern Territories'
 	
 	),
-	'australia'			=> array(
+	'australia' => array(
 		'as' => 'American Samoa',
 		'au' => 'Australia',
 		'ck' => 'Cook Islands',
@@ -64,7 +64,7 @@ $countriesByContinent = array
 		'ws' => 'Samoa',
 	
 	),	
-	'africa'			=> array(
+	'africa' => array(
 		'ao' => 'Angola',
 		'bf' => 'Burkina Faso',
 		'bi' => 'Burundi',
@@ -126,7 +126,7 @@ $countriesByContinent = array
 		'zw' => 'Zimbabwe',
 
 	),
-	'north america' 	=> array(
+	'north america' => array(
 		'ag' => 'Antigua and Barbuda',
 		'ai' => 'Anguilla',
 		'an' => 'Netherlands Antilles',	
@@ -164,7 +164,7 @@ $countriesByContinent = array
 		
 	
 	),
-	'south america'		=> array(
+	'south america' => array(
 		'ar' => 'Argentina',
 		'bo' => 'Bolivia',
 		'br' => 'Brazil',
@@ -188,7 +188,7 @@ $countriesByContinent = array
 		
 		
 	),
-	'europe'			=> array(
+	'europe' => array(
 		'ad' => 'Andorra',
 		'al' => 'Albania',
 		'at' => 'Austria',
@@ -241,7 +241,7 @@ $countriesByContinent = array
 		'va' => 'Holy See (Vatican City State)',
 	
 	),	
-	'asia'				=> array(
+	'asia' => array(
 		'ae' => 'United Arab Emirates',
 		'af' => 'Afghanistan',
 		'am' => 'Armenia',	
@@ -298,9 +298,5 @@ $countriesByContinent = array
 		'uz' => 'Uzbekistan',
 		'vn' => 'Vietnam',
 		'ye' => 'Yemen',
-
 	)
-
-
 );
-?>
