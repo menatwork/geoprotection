@@ -21,8 +21,8 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    GeoProtection
+ * @copyright  MEN AT WORK 2012
+ * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
@@ -31,5 +31,3 @@
  * Register hook 
  */
 $GLOBALS['TL_HOOKS']['getContentElement'][] = array('Geoprotection', 'checkPermission');
-
-?>

@@ -21,8 +21,8 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    Geoprotection
+ * @copyright  MEN AT WORK 2012
+ * @package    Language
  * @license    GNU/LGPL
  * @filesource
  */
@@ -40,6 +40,6 @@ $GLOBALS['TL_LANG']['CONTINENT']['north america'] = 'North america';
 $GLOBALS['TL_LANG']['CONTINENT']['other'] = 'Other';
 $GLOBALS['TL_LANG']['CONTINENT']['south america'] = 'South america';
 
-$GLOBALS['TL_LANG']['CNT']['xx'] = 'No Country';
+$GLOBALS['TL_LANG']['CNT']['xx'] = 'No country';
 
 ?>

@@ -21,7 +21,7 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
+ * @copyright  MEN AT WORK 2012
  * @package    Language
  * @license    GNU/LGPL 
  * @filesource
@@ -35,18 +35,11 @@ $GLOBALS['TL_LANG']['tl_content']['gp_protection_legend'] = 'Visibility';
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_content']['gp_protected'] = array('Enable Geoprotection','Show or hide the content element in selected countries.');
+$GLOBALS['TL_LANG']['tl_content']['gp_protected'] = array('Enable geoprotection','Show or hide the content element in selected countries.');
 $GLOBALS['TL_LANG']['tl_content']['gp_mode'] = array('Visibility','Please choose the visibility of the content element.');
 $GLOBALS['TL_LANG']['tl_content']['gp_countries'] = array('Countries','Please select one or more countries.');
-$GLOBALS['TL_LANG']['tl_content']['gp_group_id'] = array('Group','Group of the elements');
-$GLOBALS['TL_LANG']['tl_content']['gp_fallback'] = array('Fallback Element','This element acts as a fallback for this group. The fallback will be used, if the users country is not assigned to one element of the group.');
-
-
-
-
-
-$GLOBALS['TL_LANG']['tl_content']['gp_hide'] = 'Hide';
-$GLOBALS['TL_LANG']['tl_content']['gp_show'] = 'Show';
+$GLOBALS['TL_LANG']['tl_content']['gp_group_id'] = array('Group','Please select the element group.');
+$GLOBALS['TL_LANG']['tl_content']['gp_fallback'] = array('Fallback element','The fallback will be used, if the visitors country is not assigned to one element into the group.');
 
 $GLOBALS['TL_LANG']['tl_content']['gp_newGroup'] = 'New group';
 $GLOBALS['TL_LANG']['tl_content']['gp_group'] = 'Group';

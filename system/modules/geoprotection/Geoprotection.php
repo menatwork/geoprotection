@@ -1,5 +1,4 @@
-<?php
-if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 
 /**
  * Contao Open Source CMS
@@ -22,17 +21,17 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    Geoprotection
+ * @copyright  MEN AT WORK 2012
+ * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
 
 /**
- * Class Geoproptection
+ * Class geoprotection
  *
- * Provide methods for Geoprotection.
- * @copyright  MEN AT WORK 2011
+ * Provide methods for geoprotection.
+ * @copyright  MEN AT WORK 2012
  * @package    Controller
  */
 class Geoprotection extends Frontend

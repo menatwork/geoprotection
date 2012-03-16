@@ -21,8 +21,8 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    Geoprotection
+ * @copyright  MEN AT WORK 2012
+ * @package    Language
  * @license    GNU/LGPL
  * @filesource
  */

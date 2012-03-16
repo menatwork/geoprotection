@@ -21,8 +21,8 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
- * @package    Geoprotection
+ * @copyright  MEN AT WORK 2012
+ * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
@@ -69,7 +69,10 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_mode'] = array
         'default'                 => 'show',
         'exclude'                 => true,
         'inputType'               => 'select',
-        'options'                 => array('gp_show' => &$GLOBALS['TL_LANG']['tl_content']['gp_show'], 'gp_hide' => &$GLOBALS['TL_LANG']['tl_content']['gp_hide']),
+        'options'                 => array(
+                                        'gp_show' => &$GLOBALS['TL_LANG']['MSC']['hiddenShow'], 
+                                        'gp_hide' => &$GLOBALS['TL_LANG']['MSC']['hiddenHide']
+                                    ),
         'reference'               => &$GLOBALS['TL_LANG']['tl_content'],
         'eval'                    => array('mandatory' => true, 'includeBlankOption' => true, 'tl_class' => 'w50')
 );
@@ -109,8 +112,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_group_id'] = array
  * Class gp_tl_content
  *
  * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  MEN AT WORK 2011 
- * @author     MEN AT WORK <cms@men-at-work.de> 
+ * @copyright  MEN AT WORK 2012
  * @package    Controller
  */
 class gp_tl_content extends Controller
@@ -126,10 +128,10 @@ class gp_tl_content extends Controller
             $key = $arrRow['invisible'] ? 'unpublished' : 'published';
             $strGP = '';
             if($arrRow['gp_protected']){
-                $strGP = ' ({'.$arrRow['gp_group_id'].'} ';
-                $strGP .= ($arrRow['gp_mode'] == 'gp_show')? $GLOBALS['TL_LANG']['tl_content']['gp_show'] : $GLOBALS['TL_LANG']['tl_content']['gp_hide'];
+                $strGP = ' ('.$GLOBALS['TL_LANG']['tl_content']['gp_group'].' '.$arrRow['gp_group_id'].', ';
+                $strGP .= ($arrRow['gp_mode'] == 'gp_show')? ucfirst($GLOBALS['TL_LANG']['MSC']['hiddenShow']) : ucfirst($GLOBALS['TL_LANG']['MSC']['hiddenHide']);
                 $strGP .= ':';
-                $strGP .= ' '.  implode(',', deserialize($arrRow['gp_countries']));
+                $strGP .= ' '.  implode(', ', deserialize($arrRow['gp_countries']));
                 $strGP .= ')';
                 $strGP .= ($arrRow['gp_fallback']) ? ' FALLBACK' : '';
             }
@@ -253,5 +255,3 @@ class gp_tl_content extends Controller
     }
         
 }
-
-?>
