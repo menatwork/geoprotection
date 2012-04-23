@@ -21,8 +21,8 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2012
- * @package    geoprotection
+ * @copyright  MEN AT WORK 2011
+ * @package    Geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
@@ -49,7 +49,7 @@ foreach ($GLOBALS['TL_DCA']['tl_content']['palettes'] as $palette => $v)
     {
         continue;
     }
-    $GLOBALS['TL_DCA']['tl_content']['palettes'][$palette] = str_replace('{expert_legend:hide}', '{gp_protection_legend:hide},gp_protected;{expert_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes'][$palette]);
+    $GLOBALS['TL_DCA']['tl_content']['palettes'][$palette] = str_replace('{protected_legend:hide}', '{gp_protection_legend:hide},gp_protected;{protected_legend:hide}', $GLOBALS['TL_DCA']['tl_content']['palettes'][$palette]);
 }
 
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['gp_protected'] = 'gp_mode,gp_group_id,gp_fallback,gp_countries';
@@ -69,10 +69,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_mode'] = array
         'default'                 => 'show',
         'exclude'                 => true,
         'inputType'               => 'select',
-        'options'                 => array(
-                                        'gp_show' => &$GLOBALS['TL_LANG']['MSC']['hiddenShow'], 
-                                        'gp_hide' => &$GLOBALS['TL_LANG']['MSC']['hiddenHide']
-                                    ),
+        'options'                 => array('gp_show' => &$GLOBALS['TL_LANG']['tl_content']['gp_show'], 'gp_hide' => &$GLOBALS['TL_LANG']['tl_content']['gp_hide']),
         'reference'               => &$GLOBALS['TL_LANG']['tl_content'],
         'eval'                    => array('mandatory' => true, 'includeBlankOption' => true, 'tl_class' => 'w50')
 );
@@ -112,7 +109,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_group_id'] = array
  * Class gp_tl_content
  *
  * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  MEN AT WORK 2012
+ * @copyright  MEN AT WORK 2011 
+ * @author     MEN AT WORK <cms@men-at-work.de> 
  * @package    Controller
  */
 class gp_tl_content extends Controller
@@ -129,9 +127,9 @@ class gp_tl_content extends Controller
             $strGP = '';
             if($arrRow['gp_protected']){
                 $strGP = ' ('.$GLOBALS['TL_LANG']['tl_content']['gp_group'].' '.$arrRow['gp_group_id'].', ';
-                $strGP .= ($arrRow['gp_mode'] == 'gp_show')? ucfirst($GLOBALS['TL_LANG']['MSC']['hiddenShow']) : ucfirst($GLOBALS['TL_LANG']['MSC']['hiddenHide']);
+                $strGP .= ($arrRow['gp_mode'] == 'gp_show')? $GLOBALS['TL_LANG']['tl_content']['gp_show'] : $GLOBALS['TL_LANG']['tl_content']['gp_hide'];
                 $strGP .= ':';
-                $strGP .= ' '.  implode(', ', deserialize($arrRow['gp_countries']));
+                $strGP .= ' '.  implode(',', deserialize($arrRow['gp_countries']));
                 $strGP .= ')';
                 $strGP .= ($arrRow['gp_fallback']) ? ' FALLBACK' : '';
             }
@@ -255,3 +253,5 @@ class gp_tl_content extends Controller
     }
         
 }
+
+?>

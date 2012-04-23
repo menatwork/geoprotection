@@ -21,25 +21,15 @@
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2012
- * @package    Language
+ * @copyright  MEN AT WORK 2011
+ * @package    GeoProtection
  * @license    GNU/LGPL
  * @filesource
  */
 
-
 /**
- * Countries
+ * Register hook 
  */
-$GLOBALS['TL_LANG']['CONTINENT']['africa'] = 'Africa  ';
-$GLOBALS['TL_LANG']['CONTINENT']['antarctica'] = 'Antarctica';
-$GLOBALS['TL_LANG']['CONTINENT']['asia'] = 'Asia';
-$GLOBALS['TL_LANG']['CONTINENT']['australia'] = 'Australia';
-$GLOBALS['TL_LANG']['CONTINENT']['europe'] = 'Europe';
-$GLOBALS['TL_LANG']['CONTINENT']['north america'] = 'North america';
-$GLOBALS['TL_LANG']['CONTINENT']['other'] = 'Other';
-$GLOBALS['TL_LANG']['CONTINENT']['south america'] = 'South america';
-
-$GLOBALS['TL_LANG']['CNT']['xx'] = 'No country';
+$GLOBALS['TL_HOOKS']['getContentElement'][] = array('Geoprotection', 'checkPermission');
 
 ?>
