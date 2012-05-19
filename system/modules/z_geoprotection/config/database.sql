@@ -8,7 +8,7 @@
 -- ********************************************************
 
 -- 
--- Table `tl_news`
+-- Table `tl_content`
 -- 
 
 CREATE TABLE `tl_content` (

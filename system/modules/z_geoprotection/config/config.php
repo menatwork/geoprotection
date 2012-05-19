@@ -28,7 +28,7 @@
  */
 
 /**
- * Register hook 
+ * Hooks
  */
 $GLOBALS['TL_HOOKS']['getContentElement'][] = array('Geoprotection', 'checkPermission');
 

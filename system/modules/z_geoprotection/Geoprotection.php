@@ -22,7 +22,7 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
  * Software Foundation website at <http://www.gnu.org/licenses/>.
  *
  * PHP version 5
- * @copyright  MEN AT WORK 2011
+ * @copyright  MEN AT WORK 2012
  * @package    Geoprotection
  * @license    GNU/LGPL
  * @filesource
@@ -31,9 +31,9 @@ if (!defined('TL_ROOT')) die('You cannot access this file directly!');
 /**
  * Class Geoproptection
  *
- * Provide methods for Geoprotection.
- * @copyright  MEN AT WORK 2011
- * @package    Controller
+ * Provide methods for geo protection
+ * @copyright  MEN AT WORK 2012
+ * @package    Geoprotection
  */
 class Geoprotection extends Frontend
 {

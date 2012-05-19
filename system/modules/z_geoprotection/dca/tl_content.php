@@ -66,10 +66,10 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_protected'] = array
 $GLOBALS['TL_DCA']['tl_content']['fields']['gp_mode'] = array
 (
         'label'                   => &$GLOBALS['TL_LANG']['tl_content']['gp_mode'],
-        'default'                 => 'show',
+        'default'                 => 'gp_show',
         'exclude'                 => true,
         'inputType'               => 'select',
-        'options'                 => array('gp_show' => &$GLOBALS['TL_LANG']['tl_content']['gp_show'], 'gp_hide' => &$GLOBALS['TL_LANG']['tl_content']['gp_hide']),
+        'options'                 => array('gp_show', 'gp_hide'),
         'reference'               => &$GLOBALS['TL_LANG']['tl_content'],
         'eval'                    => array('mandatory' => true, 'includeBlankOption' => true, 'tl_class' => 'w50')
 );
@@ -88,7 +88,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_countries'] = array
         'label'                   => &$GLOBALS['TL_LANG']['tl_content']['gp_countries'],
         'exclude'                 => true,
         'inputType'               => 'checkbox',
-       // 'options'                 => $this->getCountries(),
         'options_callback'        => array('gp_tl_content','getCountriesByContinent'),
         'eval'                    => array('multiple' => true, 'size' => 8, 'mandatory' => true)
 );
@@ -109,9 +108,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['gp_group_id'] = array
  * Class gp_tl_content
  *
  * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  MEN AT WORK 2011 
- * @author     MEN AT WORK <cms@men-at-work.de> 
- * @package    Controller
+ * @copyright  MEN AT WORK 2012
+ * @package    geoprotection
  */
 class gp_tl_content extends Controller
 {
