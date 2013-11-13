@@ -1,0 +1,53 @@
+{
+	"name":"menatwork/geoprotection",
+	"description":"Hide or display content elements for selected countries",
+	"keywords":["geolocation","detection","protection","countries","contentelement"],
+	"type":"contao-module",
+	"homepage":"http://www.men-at-work.de",
+	"license":"LGPL-3.0+",
+	"authors":[
+		{
+			"name":"Andreas Isaak",
+			"email":"isaak@men-at-work.de",
+			"homepage":"http://www.men-at-work.de",
+			"role":"Developer"
+		},
+		{
+			"name":"Stefan Heimes",
+			"email":"heimes@men-at-work.de",
+			"homepage":"http://www.men-at-work.de",
+			"role":"Developer"
+		},
+		{
+			"name":"David Maack",
+			"email":"maack@men-at-work.de",
+			"homepage":"http://www.men-at-work.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"contao@men-at-work.de",
+		"issues":"https://github.com/menatwork/geoprotection/issues",
+		"irc":"irc://irc.freenode.org/contao.dev",
+		"source":"https://github.com/menatwork/geoprotection"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core":">=2.11,<4",
+		"contao-community-alliance/composer-installer":"*",
+		"menatwork/geolocation":"1.1.*"
+	},
+	"autoload":{
+		"classmap":["system/"]
+	},
+	"replace":{
+		"contao-legacy/geoprotection":"*"
+	},
+	"extra":{
+		"contao":{
+			"sources":{
+				"system/modules/z_geoprotection":"system/modules/z_geoprotection"
+			}
+		}
+	}
+}
