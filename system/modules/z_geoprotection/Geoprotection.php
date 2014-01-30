@@ -47,7 +47,7 @@ class Geoprotection extends Frontend
             {
                 //use Fallback
                 return (($objElement->gp_mode == "gp_show" && $objElement->gp_fallback) ||
-                        (!$objElement->gp_mode == "gp_show" && !$objElement->gp_fallback))? $strBuffer : '';                
+                        ($objElement->gp_mode != "gp_show" && !$objElement->gp_fallback))? $strBuffer : '';                
             }
         }
 
