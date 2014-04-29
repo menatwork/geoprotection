@@ -1,9 +1,9 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
  *
- * @copyright  MEN AT WORK 2013 
+ * @copyright  MEN AT WORK 2014
  * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
@@ -231,7 +231,5 @@ class gp_tl_content extends Controller
         $this->Database->prepare('UPDATE tl_content SET gp_group_countries = ? WHERE pid = ? AND gp_group_id = ?')
                     ->execute((serialize($arrCGroups)),$dc->activeRecord->pid , $intGroupId);
     }
-        
-}
 
-?>
+}
