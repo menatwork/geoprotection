@@ -1,16 +1,16 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
  *
- * @copyright  MEN AT WORK 2013 
+ * @copyright  MEN AT WORK 2014
  * @package    geoprotection
  * @license    GNU/LGPL
  * @filesource
  */
 
 /**
- * Class Geoproptection
+ * Class Geoprotection
  *
  * Provide methods for geo protection
  * @copyright  MEN AT WORK 2012
