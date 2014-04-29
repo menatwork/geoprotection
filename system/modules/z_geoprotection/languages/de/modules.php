@@ -12,4 +12,4 @@
 /**
  * Back end modules
  */
-$GLOBALS['TL_LANG']['MOD']['geoprotection'] = 'Geoprotection';
+$GLOBALS['TL_LANG']['MOD']['geoprotection'] = 'Geo Protection';
