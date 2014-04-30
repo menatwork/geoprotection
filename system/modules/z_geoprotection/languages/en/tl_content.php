@@ -21,7 +21,7 @@ $GLOBALS['TL_LANG']['tl_content']['gp_protected']           = array('Enable geo 
 $GLOBALS['TL_LANG']['tl_content']['gp_mode']                = array('Visibility','Please choose the visibility of the content element.');
 $GLOBALS['TL_LANG']['tl_content']['gp_countries']           = array('Countries','Please select one or more countries.');
 $GLOBALS['TL_LANG']['tl_content']['gp_group_id']            = array('Group','Group of the elements');
-$GLOBALS['TL_LANG']['tl_content']['gp_fallback']            = array('Fallback Element','This element acts as a fallback for this group. The fallback will be used, if the users country is not assigned to one element of the group.');
+$GLOBALS['TL_LANG']['tl_content']['gp_fallback']            = array('Fallback element','This element acts as a fallback for this group. The fallback will be used, if the users country is not assigned to one element of the group.');
 
 /**
  * Reference
